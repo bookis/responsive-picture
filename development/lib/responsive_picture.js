@@ -36,7 +36,7 @@
     ResponsivePicture.prototype._keepSrcIfBestMediaMatch = function(el) {
       var mediaQuery, mediaQueryMinWidth;
       mediaQuery = $(el).attr("media");
-      if (matchMedia(mediaQuery).matches) {
+      if (mediaQuery && matchMedia(mediaQuery).matches) {
         mediaQueryMinWidth = this._getMediaQueryMinWidth(mediaQuery);
         if (mediaQueryMinWidth >= this.largestMediaMinWidth) {
           this.largestMediaMinWidth = mediaQueryMinWidth;
